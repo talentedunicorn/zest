@@ -1,0 +1,31 @@
+// Mixin to create button
+@mixin button($bg: $blue, $bg-hover: $white, $color: $white) {
+  background: $bg;
+  color: $color;
+  border-color: $bg;
+  @extend .pv2;
+  @extend .ph3;
+  @extend .ba;
+  @extend .bw1;
+  @extend .outline-0;
+  @extend .pointer;
+
+  &:hover {
+    background: $color;
+    color: $bg;
+    border-color: $bg;
+    transition: all ease-in .3s;
+  }
+}
+
+.button {
+  @include button;
+
+  &.secondary {
+    @include button($black, $white, $white);
+  }
+
+  &.rounded {
+    @extend .br-pill;
+  }
+}
