@@ -7,6 +7,7 @@
   @extend .ph3;
   @extend .ba;
   @extend .bw1;
+  @extend .br2;
   @extend .outline-0;
   @extend .pointer;
 
@@ -20,6 +21,16 @@
 
 .button {
   @include button;
+
+  &.small {
+    @extend .f6;
+    @extend .pv1;
+    @extend .ph2;
+  }
+
+  &.large {
+    @extend .f3;
+  }
 
   &.secondary {
     @include button($black, $white, $white);
