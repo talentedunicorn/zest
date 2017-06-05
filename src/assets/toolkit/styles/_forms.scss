@@ -1,0 +1,35 @@
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+  @extend .mt1;
+  @extend .mb3;
+  @extend .outline-0;
+  @extend .db;
+  @extend .w-100;
+  @extend .pa2;
+  @extend .ba;
+  @extend .b--black;
+  @extend .bg-white;
+}
+
+.form {
+  &-row {
+    @extend .cf;
+  }
+
+  &-input,
+  &-actions {
+    @extend .pa2;
+  }
+
+  &-input {
+    @extend .fl;
+    @extend .w-50-l;
+  }
+
+  &-actions {
+    @extend .tr;
+  }
+
+}
