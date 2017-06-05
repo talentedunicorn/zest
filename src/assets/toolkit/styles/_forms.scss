@@ -1,7 +1,8 @@
 input[type="text"],
 input[type="password"],
 input[type="email"],
-select {
+select,
+textarea {
   @extend .mt1;
   @extend .mb3;
   @extend .outline-0;
@@ -11,6 +12,10 @@ select {
   @extend .ba;
   @extend .b--black;
   @extend .bg-white;
+}
+
+label {
+  @extend .b;
 }
 
 .form {
@@ -26,6 +31,10 @@ select {
   &-input {
     @extend .fl;
     @extend .w-50-l;
+
+    &.full {
+      @extend .w-100;
+    }
   }
 
   &-actions {
