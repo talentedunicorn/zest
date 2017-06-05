@@ -22,6 +22,16 @@
 .button {
   @include button;
 
+  // Types
+  &.secondary {
+    @include button($black, $white, $white);
+  }
+
+  &.rounded {
+    @extend .br-pill;
+  }
+
+  // Sizes
   &.small {
     @extend .f6;
     @extend .pv1;
@@ -30,13 +40,5 @@
 
   &.large {
     @extend .f3;
-  }
-
-  &.secondary {
-    @include button($black, $white, $white);
-  }
-
-  &.rounded {
-    @extend .br-pill;
   }
 }
