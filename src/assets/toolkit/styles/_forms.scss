@@ -10,12 +10,16 @@ textarea {
   @extend .w-100;
   @extend .pa2;
   @extend .ba;
-  @extend .b--black;
+  border-color: $moon-gray;
   @extend .bg-white;
+
+  &:focus {
+    border-color: $gray;
+  }
 }
 
 label {
-  @extend .b;
+  // @extend .b;
 }
 
 .form {
