@@ -32,6 +32,14 @@
     @extend .br-pill;
   }
 
+  &.alert {
+    @include button(map-get($color-palette, alert), $white, $white);
+  }
+
+  &.success {
+    @include button(map-get($color-palette, success), $white, $white);
+  }
+  
   // Sizes
   &.small {
     @extend .f6;
