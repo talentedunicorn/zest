@@ -22,17 +22,21 @@ blockquote {
   @extend .f2;
   @extend .f1-l;
   @extend .ma0;
-  @extend .mid-gray;
   @extend .bl;
-  @extend .bw1;
-  border-color: map-get($color-palette, gray);
+  @extend .bw2;
+  border-color: rgba(map-get($color-palette, primary), .5);
+  color: rgba(map-get($color-palette, primary), .5);
   @extend .pa3;
   @extend .pa4-l;
-  @extend .b;
 
   cite {
     @extend .f4;
     @extend .db;
     @extend .tr;
+    color: map-get($color-palette, gray);
+
+    &:before {
+      content: "— ";
+    }
   }
 }
