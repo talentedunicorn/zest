@@ -18,6 +18,33 @@ textarea {
   }
 }
 
+input[type="checkbox"] {
+  visibility: hidden; 
+
+  + span {
+    @extend .relative;
+    @extend .pl1;
+
+    &:after {
+      $checkbox-size: .75em;
+      content: "";
+      width: $checkbox-size;
+      height: $checkbox-size;
+      @extend .absolute;
+      @extend .left--1;
+      @extend .ba;
+      @extend .bw1;
+      @extend .bg-white;
+    }
+  }
+
+  &:checked + span:after {
+    @extend .bg-light-blue;
+  }
+
+
+}
+
 label {
   // @extend .b;
 }
