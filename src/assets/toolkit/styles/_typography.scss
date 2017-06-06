@@ -1,0 +1,38 @@
+h1 {
+  @extend .f2;
+}
+
+h2 {
+  @extend .f3;
+}
+
+h3 {
+  @extend .f4;
+}
+
+h4 {
+  @extend .f5;
+}
+
+h5 {
+  @extend .f6;
+}
+
+blockquote {
+  @extend .f2;
+  @extend .f1-l;
+  @extend .ma0;
+  @extend .mid-gray;
+  @extend .bl;
+  @extend .bw1;
+  border-color: map-get($color-palette, gray);
+  @extend .pa3;
+  @extend .pa4-l;
+  @extend .b;
+
+  cite {
+    @extend .f4;
+    @extend .db;
+    @extend .tr;
+  }
+}

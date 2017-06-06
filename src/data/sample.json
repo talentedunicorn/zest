@@ -1,0 +1,50 @@
+"data": {
+  "quote": {
+    "author": "Ab-soul",
+    "content": "Way back when I was in grade school, I learned about history. But what about her-story — did anybody ask?"
+  },
+  "people": [
+    {
+      "id": 1,
+      "name": "Erica Romaguera",
+      "email": "plegros@gmail.com",
+      "age": 44
+    },
+    {
+      "id": 2,
+      "name": "Caleigh Jerde",
+      "email": "rolfson.alvis@hotmail.com",
+      "age": 36
+    },
+    {
+      "id": 3,
+      "name": "Lucas Schultz",
+      "email": "godfrey.von@gmail.com",
+      "age": 32
+    },
+    {
+      "id": 4,
+      "name": "Carole Marvin",
+      "email": "ecollier@gmail.com",
+      "age": 33
+    },
+    {
+      "id": 5,
+      "name": "Dorian Feeney",
+      "email": "huel.simone@hotmail.com",
+      "age": 29
+    },
+    {
+      "id": 6,
+      "name": "Nia Gutkowski",
+      "email": "yframi@yahoo.com",
+      "age": 23
+    },
+    {
+      "id": 7,
+      "name": "Woodrow Nikolaus",
+      "email": "dbergnaum@gmail.com",
+      "age": 52
+    }
+  ]
+}
