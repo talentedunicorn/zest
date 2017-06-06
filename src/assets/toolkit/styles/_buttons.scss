@@ -1,5 +1,5 @@
 // Mixin to create button
-@mixin button($bg: map-get($color-palette, primary), $bg-hover: $white, $color: $white) {
+@mixin button($bg: map-get($color-palette, primary), $bg-hover: $white, $color-hover: map-get($color-palette, primary), $color: $white) {
   background: $bg;
   color: $color;
   border-color: $bg;
@@ -13,8 +13,8 @@
   @extend .pointer;
 
   &:hover {
-    background: $color;
-    color: $bg;
+    background: $bg-hover;
+    color: $color-hover;
     border-color: $bg;
     transition: all ease-in .3s;
   }
@@ -25,7 +25,7 @@
 
   // Types
   &.secondary {
-    @include button(map-get($color-palette, secondary), $white, $white);
+    @include button(map-get($color-palette, secondary));
   }
 
   &.rounded {
@@ -33,11 +33,11 @@
   }
 
   &.alert {
-    @include button(map-get($color-palette, alert), $white, $white);
+    @include button(map-get($color-palette, alert));
   }
 
   &.success {
-    @include button(map-get($color-palette, success), $white, $white);
+    @include button(map-get($color-palette, success));
   }
   
   // Sizes
