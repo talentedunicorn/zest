@@ -25,7 +25,7 @@
 
   // Types
   &.secondary {
-    @include button(map-get($color-palette, secondary));
+    @include button(map-get($color-palette, secondary), $white, map-get($color-palette, secondary));
   }
 
   &.rounded {
@@ -33,11 +33,11 @@
   }
 
   &.alert {
-    @include button(map-get($color-palette, alert));
+    @include button(map-get($color-palette, alert), $white, map-get($color-palette, alert));
   }
 
   &.success {
-    @include button(map-get($color-palette, success));
+    @include button(map-get($color-palette, success), $white, map-get($color-palette, success));
   }
   
   // Sizes
