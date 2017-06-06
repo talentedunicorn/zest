@@ -10,11 +10,12 @@ textarea {
   @extend .w-100;
   @extend .pa2;
   @extend .ba;
+  @extend .bw1;
   border-color: $moon-gray;
   @extend .bg-white;
 
   &:focus {
-    border-color: $gray;
+    border-color: $black;
   }
 }
 
@@ -31,6 +32,7 @@ input[type="radio"] {
     width: $radio-size;
     height: $radio-size;
     left: -3px;
+    border-color: $moon-gray;
     @extend .absolute;
     @extend .ba;
     @extend .bw1;
@@ -39,7 +41,7 @@ input[type="radio"] {
 
   &:checked {
     &:after {
-      @extend .bg-light-blue;
+      @extend .bg-black-70;
     }
   }
 }
