@@ -41,7 +41,9 @@ input[type="radio"] {
 
   &:checked {
     &:after {
-      @extend .bg-black-70;
+      transition: all ease-in-out .3s;
+      @extend .bg-blue;
+      @extend .b--blue;
     }
   }
 }
