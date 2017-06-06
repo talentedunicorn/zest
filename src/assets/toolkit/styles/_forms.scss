@@ -1,3 +1,6 @@
+$border-color: map-get($color-pallete, gray);
+$radio-size: .75em;
+
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -11,7 +14,7 @@ textarea {
   @extend .pa2;
   @extend .ba;
   @extend .bw1;
-  border-color: $moon-gray;
+  border-color: $border-color;
   @extend .bg-white;
 
   &:focus {
@@ -27,12 +30,11 @@ input[type="radio"] {
 
   &:after {
     visibility: visible;
-    $radio-size: .75em;
     content: "";
     width: $radio-size;
     height: $radio-size;
     left: -3px;
-    border-color: $moon-gray;
+    border-color: $border-color;
     @extend .absolute;
     @extend .ba;
     @extend .bw1;
