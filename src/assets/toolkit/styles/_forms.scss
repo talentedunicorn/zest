@@ -22,7 +22,7 @@ input[type="checkbox"],
 input[type="radio"] {
   visibility: hidden;
   @extend .relative;
-  @extend .ml3;
+  @extend .ml1;
 
   &:after {
     visibility: visible;
@@ -30,8 +30,8 @@ input[type="radio"] {
     content: "";
     width: $radio-size;
     height: $radio-size;
+    left: -3px;
     @extend .absolute;
-    @extend .left-0;
     @extend .ba;
     @extend .bw1;
     @extend .bg-white;
@@ -52,6 +52,12 @@ input[type="radio"] {
 
 label {
   // @extend .b;
+}
+
+.input-group {
+  label {
+    @extend .mr3;
+  }
 }
 
 .form {
