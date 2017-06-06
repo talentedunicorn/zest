@@ -18,31 +18,36 @@ textarea {
   }
 }
 
-input[type="checkbox"] {
-  visibility: hidden; 
+input[type="checkbox"],
+input[type="radio"] {
+  visibility: hidden;
+  @extend .relative;
+  @extend .ml3;
 
-  + span {
-    @extend .relative;
-    @extend .pl1;
+  &:after {
+    visibility: visible;
+    $radio-size: .75em;
+    content: "";
+    width: $radio-size;
+    height: $radio-size;
+    @extend .absolute;
+    @extend .left-0;
+    @extend .ba;
+    @extend .bw1;
+    @extend .bg-white;
+  }
 
+  &:checked {
     &:after {
-      $checkbox-size: .75em;
-      content: "";
-      width: $checkbox-size;
-      height: $checkbox-size;
-      @extend .absolute;
-      @extend .left--1;
-      @extend .ba;
-      @extend .bw1;
-      @extend .bg-white;
+      @extend .bg-light-blue;
     }
   }
+}
 
-  &:checked + span:after {
-    @extend .bg-light-blue;
+input[type="radio"] {
+  &:after {
+    @extend .br-100; 
   }
-
-
 }
 
 label {
