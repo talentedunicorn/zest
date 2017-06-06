@@ -57,6 +57,11 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        .button {
+          @include button(map-get($color-palette, primary), map-get($color-palette, primary), $white);
+          @extend .grow;
+        }
       }
     }
 
@@ -79,6 +84,5 @@
 
   &-actions {
     @extend .pt2;
-    @extend .tr;
   }
 }
