@@ -3,6 +3,7 @@
   background: $bg;
   color: $color;
   border-color: $bg;
+  @extend .mb1;
   @extend .pv2;
   @extend .ph3;
   @extend .ba;
@@ -40,5 +41,22 @@
 
   &.large {
     @extend .f3;
+  }
+
+  &.full {
+    @extend .db;
+    @extend .w-100;
+  }
+
+  // Grouping
+  &-group {
+    & > * {
+      @extend .mb2;
+      @extend .mr2;
+
+      &:last-child {
+        @extend .mr0;
+      }
+    }
   }
 }
