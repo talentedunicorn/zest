@@ -78,6 +78,7 @@ label {
 
   &-input {
     @extend .fl;
+    @extend .w-100;
     @extend .w-50-l;
 
     &.full {
