@@ -1,0 +1,7 @@
+<ul class="menu">
+  {{#each sample.data.menu}}
+  <li>
+    <a href="#" class="{{#if active }}active{{/if}} {{#if is_button}}button{{/if}}">{{title}}</a>
+  </li>
+  {{/each}}
+</ul>

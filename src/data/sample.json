@@ -3,6 +3,12 @@
     "author": "Ab-soul",
     "content": "Way back when I was in grade school, I learned about history. But what about her-story — did anybody ask?"
   },
+  "menu": [
+    {"title" : "Home", "active": true },
+    {"title": "About"},
+    {"title": "Contact"},
+    {"title": "Get started", "is_button": true}
+  ],
   "people": [
     {
       "id": 1,
