@@ -6,6 +6,10 @@
   li {
     @extend .db;
     @extend .dib-l;
+
+    .sidebar & {
+      @extend .db;
+    }
   }
 
   .button {
@@ -19,13 +23,18 @@
     @extend .db;
     @extend .pa3;
     @extend .black;
-    @extend .bl;
+    @extend .br;
     @extend .bw1;
     @extend .bn-l;
     @extend .b--transparent;
     @extend .b;
     @extend .mb2;
     @extend .mb0-l;
+
+    .sidebar & {
+      @extend .br-l;
+      @extend .bw2;
+    }
 
     &.active,
     &:hover {

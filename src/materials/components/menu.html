@@ -1,7 +1,11 @@
 <ul class="menu">
   {{#each sample.data.menu}}
   <li>
-    <a href="#" class="{{#if active }}active{{/if}} {{#if is_button}}button{{/if}}">{{title}}</a>
+    {{#if is_button}}
+      <button class="button">{{title}}</button>
+    {{ else }}
+      <a href="#" class="{{#if active }}active{{/if}}">{{title}}</a>
+    {{/if}}
   </li>
   {{/each}}
 </ul>
