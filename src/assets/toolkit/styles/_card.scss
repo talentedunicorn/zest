@@ -13,7 +13,7 @@
     @extend .tracked;
 
     .secondary & {
-      @extend .bg-black;
+      background-color: map-get($color-palette, secondary);
     }
   }
 
