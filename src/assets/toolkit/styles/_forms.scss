@@ -34,6 +34,8 @@ input[type="radio"] {
     width: $radio-size;
     height: $radio-size;
     left: -3px;
+    top: 50%;
+    transform: translateY(-50%);
     border-color: $border-color;
     @extend .absolute;
     @extend .ba;
@@ -45,7 +47,7 @@ input[type="radio"] {
     &:after {
       transition: all ease-in-out .3s;
       background-color: map-get($color-palette, primary);
-      border-color: map-get($color-palette, primary);
+      border-color: $white;
     }
   }
 }
