@@ -26,6 +26,7 @@ input[type="checkbox"],
 input[type="radio"] {
   visibility: hidden;
   @extend .ml1;
+  @extend .mb3;
 
   label & {
     @extend .relative;
@@ -62,7 +63,8 @@ input[type="radio"] {
 }
 
 label {
-  // @extend .b;
+  @extend .dib;
+  @extend .w-100;
 }
 
 .input-group {
