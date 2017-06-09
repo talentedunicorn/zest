@@ -26,6 +26,7 @@ input[type="checkbox"],
 input[type="radio"] {
   @extend .outline-0;
   @extend .ml1;
+  @extend .mr1;
   @extend .mb2;
 
   label & {
