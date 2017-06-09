@@ -24,9 +24,9 @@ textarea {
 
 input[type="checkbox"],
 input[type="radio"] {
-  visibility: hidden;
+  @extend .outline-0;
   @extend .ml1;
-  @extend .mb3;
+  @extend .mb2;
 
   label & {
     @extend .relative;
@@ -37,7 +37,7 @@ input[type="radio"] {
     content: "";
     width: $radio-size;
     height: $radio-size;
-    left: $radio-size / -2;
+    left: - $radio-size / 4;
     top: 50%;
     transform: translateY(-50%);
     border-color: $border-color;
@@ -63,13 +63,14 @@ input[type="radio"] {
 }
 
 label {
-  @extend .dib;
-  @extend .w-100;
 }
 
 .input-group {
   label {
     @extend .mr3;
+    @extend .mb3;
+    @extend .db;
+    @extend .dib-l
   }
 }
 
