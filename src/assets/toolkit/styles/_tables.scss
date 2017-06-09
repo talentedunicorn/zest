@@ -1,0 +1,32 @@
+table {
+  @extend .w-100;
+  border-collapse: collapse;
+
+  td,
+  th {
+    @extend .tl;
+    @extend .pa2;
+  }
+
+  thead th {
+    @extend .bb;
+    @extend .bw1;
+  }
+
+  tfoot th {
+    @extend .bt;
+    @extend .bw1;
+  }
+
+  tbody {
+    tr {
+      &:nth-child(2n) {
+        background: rgba(map-get($color-palette, gray), .3);
+      }
+
+      &:hover {
+        background: rgba(map-get($color-palette, primary), .3);
+      }
+    }
+  }
+}

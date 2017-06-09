@@ -1,0 +1,46 @@
+.menu {
+  @extend .list;
+  @extend .ma0;
+  @extend .pa0;
+
+  li {
+    @extend .db;
+    @extend .dib-l;
+
+    .sidebar & {
+      @extend .db;
+    }
+  }
+
+  .button {
+    @include button;
+    @extend .dib;
+    @extend .pa2;
+  }
+
+  a {
+    @extend .link;
+    @extend .db;
+    @extend .pa3;
+    @extend .black;
+    @extend .br;
+    @extend .bw1;
+    @extend .bn-l;
+    @extend .b--transparent;
+    @extend .b;
+    @extend .mb2;
+    @extend .mb0-l;
+
+    .sidebar & {
+      @extend .br-l;
+      @extend .bw2;
+    }
+
+    &.active,
+    &:hover {
+      color: map-get($color-palette, primary);
+      border-color: map-get($color-palette, primary);
+      @extend .white;
+    }
+  }
+}

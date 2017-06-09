@@ -1,0 +1,101 @@
+$border-color: map-get($color-palette, gray);
+$radio-size: 1rem;
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select,
+textarea {
+  @extend .mt1;
+  @extend .mb3;
+  @extend .outline-0;
+  @extend .db;
+  @extend .w-100;
+  @extend .pa2;
+  @extend .ba;
+  @extend .bw1;
+  border-color: $border-color;
+  @extend .bg-white;
+
+  &:focus {
+    border-color: $black;
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  @extend .outline-0;
+  @extend .ml1;
+  @extend .mb2;
+
+  label & {
+    @extend .relative;
+  }
+
+  &:after {
+    visibility: visible;
+    content: "";
+    width: $radio-size;
+    height: $radio-size;
+    left: - $radio-size / 4;
+    top: 50%;
+    transform: translateY(-50%);
+    border-color: $border-color;
+    @extend .absolute;
+    @extend .ba;
+    @extend .bw1;
+    @extend .bg-white;
+  }
+
+  &:checked {
+    &:after {
+      transition: all ease-in-out .3s;
+      background-color: map-get($color-palette, primary);
+      border-color: $white;
+    }
+  }
+}
+
+input[type="radio"] {
+  &:after {
+    @extend .br-100; 
+  }
+}
+
+label {
+}
+
+.input-group {
+  label {
+    @extend .mr3;
+    @extend .mb3;
+    @extend .db;
+    @extend .dib-l
+  }
+}
+
+.form {
+  &-row {
+    @extend .cf;
+  }
+
+  &-input,
+  &-actions {
+    @extend .pa2;
+  }
+
+  &-input {
+    @extend .fl;
+    @extend .w-100;
+    @extend .w-50-l;
+
+    &.full {
+      @extend .w-100;
+    }
+  }
+
+  &-actions {
+    @extend .tr;
+  }
+
+}

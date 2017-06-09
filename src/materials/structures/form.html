@@ -1,6 +1,70 @@
-<form action="">
-	<div>
-		{{> text-input}}
-	</div>
-	{{> button}}
+---
+notes: |
+  Form styling with classes `.form, .form-row, .form-actions, .form-input, .input-group, .button-group` 
+---
+<form class="form" action="">
+  <div class="form-row">
+    <div class="form-input">
+      <label>First name<input type="text" /></label>
+    </div>
+
+    <div class="form-input">
+      <label>Last name<input type="text" /></label>
+    </div>
+
+    <div class="form-input">
+      <label>Email address<input type="email" /></label>
+    </div>
+
+    <div class="form-input">
+      <label>Password<input type="password" /></label>
+    </div>
+
+    <div class="form-input">
+      <label>Favorite animal
+        <select multiple="true">
+          <option value="moose">Moose</option>
+          <option value="unicorn">Unicorn</option>
+          <option value="mountain_lion">Mountain lion</option>
+          <option value="emu">Emu</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="form-input">
+      <label>Gender
+        <select>
+          <option value="f">Female</option>
+          <option value="m">Male</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="form-input">
+      <label><input type="checkbox"> I hereby confirm something.</label>
+    </div>
+
+    <div class="form-input input-group">
+      <label>
+        <input type="radio" name="status" id="radio1" /> Available
+      </label>
+
+      <label>
+        <input type="radio" name="status" id="radio2" /> Out of stock
+      </label>
+
+      <label>
+        <input type="radio" name="status" id="radio3" /> Discontinued
+      </label>
+    </div>
+
+    <div class="form-input full">
+      <label>Message<textarea rows="5"></textarea></label>
+    </div>
+  </div>
+
+  <div class="form-actions button-group">
+    <button class="button secondary" type="reset">Cancel</button>
+    <button class="button" type="submit">Send</button>
+  </div>
 </form>

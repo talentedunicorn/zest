@@ -1,0 +1,42 @@
+h1 {
+  @extend .f2;
+}
+
+h2 {
+  @extend .f3;
+}
+
+h3 {
+  @extend .f4;
+}
+
+h4 {
+  @extend .f5;
+}
+
+h5 {
+  @extend .f6;
+}
+
+blockquote {
+  @extend .f2;
+  @extend .f1-l;
+  @extend .ma0;
+  @extend .bl;
+  @extend .bw2;
+  border-color: rgba(map-get($color-palette, primary), .5);
+  color: rgba(map-get($color-palette, primary), .5);
+  @extend .pa3;
+  @extend .pa4-l;
+
+  cite {
+    @extend .f4;
+    @extend .db;
+    @extend .tr;
+    color: map-get($color-palette, gray);
+
+    &:before {
+      content: "— ";
+    }
+  }
+}

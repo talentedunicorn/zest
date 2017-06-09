@@ -1,0 +1,88 @@
+.card {
+
+  &-header,
+  &-content {
+    @extend .pa2;
+  }
+
+  &-header {
+    background-color: map-get($color-palette, primary);
+    @extend .white;
+    @extend .b;
+    @extend .ttu;
+    @extend .tracked;
+
+    .secondary & {
+      background-color: map-get($color-palette, secondary);
+    }
+  }
+
+  &-content {
+    @extend .ba;
+    @extend .bt-0;
+    border-color: map-get($color-palette, gray);
+  }
+
+  &-image {
+    @extend .pa0;
+    @extend .overflow-hidden;
+
+    .with-image-content & {
+      @extend .relative;
+
+      &:hover {
+        .card-image-content,
+        &:before {
+          transition: all ease-in-out .3s;
+          @extend .o-100;
+        }
+      }
+
+      &:before,
+      .card-image-content {
+        @extend .o-0; 
+      }
+
+      &:before {
+        content: "";
+        @extend .absolute;
+        @extend .absolute--fill;
+        background: rgba($black, .5);
+      }
+
+      .card-image-content {
+        @extend .white;
+        @extend .tc;
+        @extend .absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .button {
+          @include button(map-get($color-palette, primary), map-get($color-palette, primary), $white);
+          @extend .grow;
+        }
+      }
+    }
+
+    img {
+      @extend .db;
+    }
+  }
+
+  &-group {
+    @extend .cf;
+
+    & > * {
+      @extend .w-third-l;
+      @extend .w-50-m;
+      @extend .w-100;
+      @extend .fl;
+      @extend .pa2;
+    }
+  }
+
+  &-actions {
+    @extend .pt2;
+  }
+}

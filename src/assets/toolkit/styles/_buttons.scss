@@ -1,0 +1,70 @@
+// Mixin to create button
+@mixin button($bg: map-get($color-palette, primary), $bg-hover: $white, $color-hover: map-get($color-palette, primary), $color: $white) {
+  background: $bg;
+  color: $color;
+  border-color: $bg;
+  border-radius: $button-border-radius;
+  @extend .mb1;
+  @extend .pv2;
+  @extend .ph3;
+  @extend .ba;
+  @extend .bw1;
+  @extend .outline-0;
+  @extend .pointer;
+
+  &:hover {
+    background: $bg-hover;
+    color: $color-hover;
+    border-color: $bg;
+    transition: all ease-in .3s;
+  }
+}
+
+.button {
+  @include button;
+
+  // Types
+  &.secondary {
+    @include button(map-get($color-palette, secondary), $white, map-get($color-palette, secondary));
+  }
+
+  &.rounded {
+    @extend .br-pill;
+  }
+
+  &.alert {
+    @include button(map-get($color-palette, alert), $white, map-get($color-palette, alert));
+  }
+
+  &.success {
+    @include button(map-get($color-palette, success), $white, map-get($color-palette, success));
+  }
+  
+  // Sizes
+  &.small {
+    @extend .f6;
+    @extend .pv1;
+    @extend .ph2;
+  }
+
+  &.large {
+    @extend .f3;
+  }
+
+  &.full {
+    @extend .db;
+    @extend .w-100;
+  }
+
+  // Grouping
+  &-group {
+    & > * {
+      @extend .mb2;
+      @extend .mr2;
+
+      &:last-child {
+        @extend .mr0;
+      }
+    }
+  }
+}
