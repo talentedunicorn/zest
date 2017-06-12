@@ -1,5 +1,5 @@
 $border-color: map-get($color-palette, gray);
-$radio-size: 1rem;
+$radio-size: 1em;
 
 input[type="text"],
 input[type="password"],
@@ -24,46 +24,47 @@ textarea {
 
 input[type="checkbox"],
 input[type="radio"] {
-  @extend .outline-0;
-  @extend .ml1;
-  @extend .mr1;
-  @extend .mb2;
+  @extend .absolute;
+  @extend .overflow-hidden;
+  top: auto;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
 
-  label & {
-    @extend .relative;
+  & + label {
+    @extend .pointer;
   }
 
-  &:after {
-    visibility: visible;
-    content: "";
-    width: $radio-size;
+  & + label:before {
+    content: '';
     height: $radio-size;
-    left: - $radio-size / 4;
-    top: 50%;
-    transform: translateY(-50%);
+    width: $radio-size;
+    margin-right: $radio-size / 2;
+    margin-bottom: $radio-size / 2;
     border-color: $border-color;
-    @extend .absolute;
+    box-sizing: border-box;
+    @extend .db;
+    @extend .fl;
     @extend .ba;
     @extend .bw1;
-    @extend .bg-white;
+    @extend .v-mid;
   }
 
-  &:checked {
-    &:after {
-      transition: all ease-in-out .3s;
-      background-color: map-get($color-palette, primary);
-      border-color: $white;
-    }
+  &:checked + label:before {
+    background: map-get($color-palette, primary);
+    box-shadow: inset 0 0 0 2px $white;
+    border-color: map-get($color-palette, primary);
+
+    transition: all ease-in .2s;
   }
 }
 
 input[type="radio"] {
-  &:after {
+  & + label:before {
     @extend .br-100; 
   }
-}
-
-label {
 }
 
 .input-group {
