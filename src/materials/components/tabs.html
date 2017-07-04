@@ -1,0 +1,17 @@
+---
+notes: | 
+  Tabs are available using classes `.tabs` `.tabs-header`
+---
+<div class="tabs">
+  <div class="tabs-header">
+    {{#each sample.data.tabs}} 
+    <a class="tabs-header-link" href="#" data-tab={{id}}>{{title}}</a>
+    {{/each}}
+  </div>
+
+  <div class="tabs-content-wrapper">
+    <div id="" class="tabs-content">
+      {{>  paragraph }}
+    </div>
+  </div>
+</div>
