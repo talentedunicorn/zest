@@ -54,7 +54,7 @@
     }
   ],
   "tabs": [
-    {"id": "active", "title": "Active"},
+    {"id": "active", "title": "Active", "active": true},
     {"id": "completed", "title": "Completed"},
     {"id": "archived", "title": "Archived"},
     {"id": "deleted", "title": "Deleted"}

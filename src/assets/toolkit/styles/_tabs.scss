@@ -12,6 +12,10 @@
       @extend .black;
       @extend .pa3;
 
+      &:focus {
+        outline: none;
+      }
+
       &:hover,
       &.active {
         @extend .bg-black;
