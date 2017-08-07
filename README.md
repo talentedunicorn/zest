@@ -1,7 +1,5 @@
-<p align="center">
-  <img src="http://fbrctr.github.io/assets/toolkit/images/logo.svg" width="500">
-</p>
-
 # Zest toolkit
 
-A toolkit powered by [Fabricator](http://fbrctr.github.io)
+UI toolkit for building highly-modular design systems for rapid web page development.
+
+Powered by [Fabricator](http://fbrctr.github.io)

@@ -1,0 +1,34 @@
+.tabs {
+  @extend .ba;
+  
+  &-header {
+    @extend .cf;
+
+    &-link {
+      @extend .db;
+      @extend .dib-ns;
+      @extend .fl-ns;
+      @extend .link;
+      @extend .black;
+      @extend .pa3;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:hover,
+      &.active {
+        @extend .bg-black;
+        @extend .white;
+      }
+    }
+  }
+
+  &-content {
+
+    &-wrapper {
+      @extend .bt;
+      @extend .pa3;
+    }
+  }
+}

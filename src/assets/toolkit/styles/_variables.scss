@@ -1,9 +1,21 @@
 $color-palette: (
-  primary: $blue,
-  secondary: $gray,
+  primary: $light-blue,
+  secondary: $near-black,
   gray: $moon-gray,
   alert: $red,
   success: $green,
 );
 
-$button-border-radius: 3px;
+$button-border-radius: 2px;
+
+.primary {
+  color: map-get($color-palette, primary);
+}
+
+.bg-primary {
+  background-color: map-get($color-palette, primary);
+}
+
+.b--primary {
+  border-color: map-get($color-palette, primary);
+}

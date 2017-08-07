@@ -52,5 +52,12 @@
       "email": "dbergnaum@gmail.com",
       "age": 52
     }
+  ],
+  "tabs": [
+    {"id": "active", "title": "Active", "active": true},
+    {"id": "completed", "title": "Completed"},
+    {"id": "archived", "title": "Archived"},
+    {"id": "deleted", "title": "Deleted"},
+    {"id": "banned", "title": "Banned"}
   ]
 }

@@ -29,6 +29,10 @@ const config = {
       dest: 'dist/assets/toolkit/styles',
       watch: 'src/assets/toolkit/styles/**/*.scss',
     },
+    fonts: {
+      src: './node_modules/sass-font-awesome/fonts/*',
+      dest: 'dist/assets/toolkit/fonts',
+    },
   },
   scripts: {
     fabricator: {
@@ -77,7 +81,7 @@ gulp.task('styles:toolkit', () => {
   gulp.src(config.styles.toolkit.src)
   .pipe(gulpif(config.dev, sourcemaps.init()))
   .pipe(sass({
-    includePaths: ['./node_modules', './node_modules/tachyons-sass'],
+    includePaths: ['./node_modules', './node_modules/tachyons-sass', './node_modules/sass-font-awesome'],
   }).on('error', sass.logError))
   .pipe(prefix('last 1 version'))
   .pipe(gulpif(!config.dev, csso()))
@@ -86,7 +90,12 @@ gulp.task('styles:toolkit', () => {
   .pipe(gulpif(config.dev, reload({ stream: true })));
 });
 
-gulp.task('styles', ['styles:fabricator', 'styles:toolkit']);
+gulp.task('styles:fonts', () => {
+  gulp.src(config.styles.fonts.src)
+  .pipe(gulp.dest(config.styles.fonts.dest))
+});
+
+gulp.task('styles', ['styles:fabricator', 'styles:toolkit', 'styles:fonts']);
 
 
 // scripts
