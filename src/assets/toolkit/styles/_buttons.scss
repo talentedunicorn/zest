@@ -1,5 +1,5 @@
 // Mixin to create button
-@mixin button($bg: map-get($color-palette, primary), $bg-hover: $white, $color-hover: map-get($color-palette, primary), $color: $white) {
+@mixin button($bg: map-get($color-palette, primary), $bg-hover: $white, $color-hover: map-get($color-palette, primary), $color: $black) {
   background: $bg;
   color: $color;
   border-color: $bg;
@@ -25,7 +25,7 @@
 
   // Types
   &.secondary {
-    @include button(map-get($color-palette, secondary), $white, map-get($color-palette, secondary));
+    @include button(map-get($color-palette, secondary), $white, map-get($color-palette, secondary), $white);
   }
 
   &.rounded {
