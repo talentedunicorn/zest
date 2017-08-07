@@ -1,4 +1,5 @@
 .tabs {
+  @extend .b--primary;
   
   &.bordered {
     @extend .ba;
