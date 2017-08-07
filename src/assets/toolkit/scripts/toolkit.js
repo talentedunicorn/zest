@@ -3,28 +3,18 @@
  */
 
 // Tabs
-var tabs = {
-  tabsItem: document.querySelector('[data-tabs]'),
-  init: function () {
-    var links = tabs.tabsItem.querySelectorAll('a');
-    var active = tabs.tabsItem.querySelector('.active');
+function Tabs (tab) {
+  this.tabsItem = tab;
 
-    // Run first time
-    tabs.displayTabs(active);
-
-    // Bind links
-    links.forEach(function (i) {
-      i.addEventListener('click', tabs.showTab);
-    });
-  },
-  displayTabs: function (active) {
-    var tabsContent = tabs.tabsItem.querySelectorAll('[data-tabs-content]');
+  this.displayTabs = function (active) {
+    var tabsContent = this.tabsItem.querySelectorAll('[data-tabs-content]');
 
     tabsContent.forEach(function (t) {
         t.style.display = t.getAttribute('id') !== active.dataset.tab ? 'none': '';
     });
-  },
-  showTab: function (e) {
+  }.bind(this);
+
+  this.showTab = function (e) {
     e.preventDefault();
     
     var siblings = Array.prototype.filter.call(e.target.parentNode.children, function(child) { 
@@ -37,8 +27,25 @@ var tabs = {
     });
 
     e.target.classList.add('active');
-    tabs.displayTabs(e.target);
-  }
-};
+    this.displayTabs(e.target);
+  }.bind(this);
 
-tabs.init();
+  var links = this.tabsItem.querySelectorAll('a');
+  var active = this.tabsItem.querySelector('.active');
+
+  // Run first time
+  this.displayTabs(active);
+
+  // Bind links
+  for(var link of links) {
+    link.addEventListener('click', this.showTab);
+  }
+}
+
+// Initialize Tabs
+var tabs = document.querySelectorAll('[data-tabs]');
+
+for (var tab of tabs) {
+  new Tabs(tab);
+}
+
