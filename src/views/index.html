@@ -3,11 +3,17 @@ title: Overview | Zest
 fabricator: true
 ---
 
-<h1>Overview</h1>
+<h1>Zest</h1>
 
-<p>This UI toolkit is a highly-modular design system for rapid web page development. It contains different materials that can be assembled into more complex page layouts.</p>
+<p>UI toolkit for building highly-modular design systems for rapid web page development.</p>
 
 <p>This guide contains real working examples, code snippets, documentation, and style guidelines.</p>
+
+<h2>What's in the box</h2>
+<ul>
+  <li><a href="http://tachyons.io">Tachyons</a></li>
+  <li><a href="http://fontawesome.io">Font Awesome</a></li>
+</ul>
 
 <h2>Usage</h2>
 
@@ -18,16 +24,6 @@ fabricator: true
 <pre class="language-markup"><code class="language-markup">&lt;script src=&quot;assets/toolkit/scripts/toolkit.js&quot;&gt;&lt;/script&gt;</code></pre>
 
 
-<h2>Color</h2>
+<h2>Contributing</h2>
 
-{{#each toolkit.colors}}
-	<div class="f-color-chips">
-	{{#each this}}
-		<div class="f-color-chip">
-			<div class="f-color-chip__name">{{@key}}</div>
-			<div class="f-color-chip__color">{{this}}</div>
-		</div>
-	{{/each}}
-	</div>
-{{/each}}
-
+<p>The repository can be found on <a class="button small link" href="https://github.com/talentedunicorn/zest">Github <i class="fa fa-lg fa-github"></i></a></p>
