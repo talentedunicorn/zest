@@ -1,5 +1,9 @@
 .tabs {
-  @extend .ba;
+  @extend .b--primary;
+  
+  &.bordered {
+    @extend .ba;
+  }
   
   &-header {
     @extend .cf;
@@ -9,7 +13,7 @@
       @extend .dib-ns;
       @extend .fl-ns;
       @extend .link;
-      @extend .black;
+      @extend .primary;
       @extend .pa3;
 
       &:focus {
@@ -18,7 +22,7 @@
 
       &:hover,
       &.active {
-        @extend .bg-black;
+        @extend .bg-primary;
         @extend .white;
       }
     }
@@ -28,6 +32,7 @@
 
     &-wrapper {
       @extend .bt;
+      @extend .b--primary;
       @extend .pa3;
     }
   }
