@@ -7,3 +7,15 @@ $color-palette: (
 );
 
 $button-border-radius: 2px;
+
+.primary {
+  color: map-get($color-palette, primary);
+}
+
+.bg-primary {
+  background-color: map-get($color-palette, primary);
+}
+
+.b--primary {
+  border-color: map-get($color-palette, primary);
+}
