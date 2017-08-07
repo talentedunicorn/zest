@@ -1,5 +1,5 @@
 // Mixin to create button
-@mixin button($bg: map-get($color-palette, primary), $bg-hover: $white, $color-hover: map-get($color-palette, primary), $color: $black) {
+@mixin button($bg: map-get($color-palette, primary), $bg-hover: $white, $color-hover: map-get($color-palette, primary), $color: $white) {
   background: $bg;
   color: $color;
   border-color: $bg;
@@ -11,6 +11,7 @@
   @extend .bw1;
   @extend .outline-0;
   @extend .pointer;
+  @extend .b;
 
   &:hover {
     background: $bg-hover;
