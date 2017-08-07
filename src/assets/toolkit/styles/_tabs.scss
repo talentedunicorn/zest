@@ -7,11 +7,13 @@
   
   &-header {
     @extend .cf;
+    @extend .overflow-y-auto;
+    white-space: nowrap;
 
     &-link {
-      @extend .db;
-      @extend .dib-ns;
-      @extend .fl-ns;
+      margin-left: -4px; // https://css-tricks.com/fighting-the-space-between-inline-block-elements/#article-header-id-1
+      @extend .dib;
+      @extend .ma0;
       @extend .link;
       @extend .primary;
       @extend .pa3;
