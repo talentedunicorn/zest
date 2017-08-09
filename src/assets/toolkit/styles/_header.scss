@@ -1,21 +1,26 @@
 .header {
   @extend .f2;
   @extend .mv1;
-  @extend .pa2;
+  @extend .pv2;
 
-  &-bordered {
+  &.bordered {
     @extend .bb;
     @extend .bw2;
   }
 
-  &-background {
+  &.background {
     @extend .bg-primary;
     @extend .white;
+    @extend .ph2;
   }
 
-  &-mini {
+  &.mini {
     @extend .f5;
     @extend .ttu;
     @extend .tracked;
+
+    &.bordered {
+      @extend .bw1;
+    }
   }
 }
