@@ -3,15 +3,6 @@
   background: $bg;
   color: $color;
   border-color: $bg;
-  border-radius: $button-border-radius;
-  @extend .mb1;
-  @extend .pv2;
-  @extend .ph3;
-  @extend .ba;
-  @extend .bw1;
-  @extend .outline-0;
-  @extend .pointer;
-  @extend .b;
 
   &:hover {
     background: $bg-hover;
@@ -23,6 +14,15 @@
 
 .button {
   @include button;
+  @extend .mb1;
+  @extend .pv2;
+  @extend .ph3;
+  @extend .ba;
+  @extend .bw1;
+  @extend .outline-0;
+  @extend .pointer;
+  @extend .b;
+  border-radius: $button-border-radius;
 
   // Types
   &.secondary {
