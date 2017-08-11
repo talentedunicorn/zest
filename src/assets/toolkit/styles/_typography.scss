@@ -42,7 +42,9 @@ blockquote {
 }
 
 a {
-  @extend .primary;
-  @extend .hover-near-black;
   @extend .link;
+}
+
+pre {
+  @extend .overflow-x-auto;
 }

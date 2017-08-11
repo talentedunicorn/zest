@@ -38,9 +38,11 @@
         }
       }
 
-      &:before,
-      .card-image-content {
-        @extend .o-0; 
+      @media #{$breakpoint-large} {
+        &:before,
+        .card-image-content {
+          opacity: 0;
+        }
       }
 
       &:before {
@@ -57,11 +59,13 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+      }
+    }
 
-        .button {
-          @include button(map-get($color-palette, primary), map-get($color-palette, primary), $white);
-          @extend .grow;
-        }
+    .visible & {
+      &:before,
+      .card-image-content {
+        opacity: 100;
       }
     }
 
@@ -83,6 +87,6 @@
   }
 
   &-actions {
-    @extend .pt2;
+    @extend .pt1;
   }
 }
