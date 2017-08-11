@@ -1,0 +1,8 @@
+.footer {
+  .social {
+    @extend .pa2;
+    @extend .ma2;
+    @extend .primary;
+    @extend .hover-black;
+  }
+}
