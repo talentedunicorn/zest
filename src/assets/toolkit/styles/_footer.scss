@@ -1,4 +1,6 @@
 .footer {
+  @extend .pb4;
+
   .social {
     @extend .pa2;
     @extend .ma2;
