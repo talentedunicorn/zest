@@ -44,3 +44,7 @@ blockquote {
 a {
   @extend .link;
 }
+
+pre {
+  @extend .overflow-x-auto;
+}
