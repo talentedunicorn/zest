@@ -1,10 +1,18 @@
 .footer {
   @extend .pb4;
 
+  &-text {
+    @extend .ma0;
+  }
+
   .social {
-    @extend .pa2;
-    @extend .ma2;
+    @extend .f5;
+    @extend .ma3;
     @extend .primary;
     @extend .hover-black;
+
+    &:last-child {
+      @extend .mr0-ns;
+    }
   }
 }
