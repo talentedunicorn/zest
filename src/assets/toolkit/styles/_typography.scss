@@ -41,6 +41,12 @@ blockquote {
   }
 }
 
+ol,
+ul,
+p {
+  @extend .lh-copy;
+}
+
 a {
   @extend .link;
 }

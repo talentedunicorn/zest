@@ -1,10 +1,17 @@
-<div class="container pa2 pb4 bg-primary bb b--light-gray">
-  <h1 class="header mini background ph3">Simple gallery</h1>
+<div class="bb b--light-gray">
+  <div class="container pa3">
+    <h1 class="header mini">Simple responsive gallery</h1>
+  </div>
+</div>
 
+<div class="container pa2">
   {{#iterate 12}}
-    <div class="pa2 fl-ns w-50-m w-third-l">
-      <img class="grow" src="//unsplash.it/600/400" alt="">
-    </div>
+  <a class="db pa2 fl-ns w-50-m w-third-l" href="//unsplash.it/600/400?image=1{{@index}}" target="blank">
+      <img class="dim" src="//unsplash.it/600/400?image=1{{@index}}" alt="">
+    </a>
   {{/iterate}}
 </div>
-{{> footer}}
+
+<div class="bt b--light-gray">
+  {{> footer}}
+</div>
