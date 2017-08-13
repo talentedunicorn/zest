@@ -1,17 +1,36 @@
-<div class="bb b--light-gray">
-  <div class="container pa3">
-    <h1 class="header mini">Simple responsive gallery</h1>
+<div id="top-heading" class="z-max w-100 bg-white bb b--light-gray">
+  <div class="container dt-l w-100 pa3">
+    <h1 class="header mini dtc-l v-mid-l w-60-l">Simple responsive gallery </h1>
+    <div class="dtc-l v-mid-l w-40-l tr">
+      <button class="button rounded">Contact</button>
+    </div>
   </div>
 </div>
 
 <div class="container pa2">
   {{#iterate 12}}
   <a class="db pa2 fl-ns w-50-m w-third-l" href="//unsplash.it/600/400?image=1{{@index}}" target="blank">
-      <img class="dim" src="//unsplash.it/600/400?image=1{{@index}}" alt="">
-    </a>
+    <img class="dim" src="//unsplash.it/600/400?image=1{{@index}}" alt="">
+  </a>
   {{/iterate}}
 </div>
 
 <div class="bt b--light-gray">
   {{> footer}}
 </div>
+
+<script type="text/javascript">
+  var topHeading = document.getElementById('top-heading');
+  var topHeadingOffset = topHeading.offsetHeight;
+  
+
+  window.onscroll = triggerFixed;
+
+  function triggerFixed() {
+    if (window.scrollY >= topHeadingOffset) {
+      topHeading.classList.add('fixed');
+    } else {
+      topHeading.classList.remove('fixed');
+    }
+  }
+</script>
