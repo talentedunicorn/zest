@@ -14,6 +14,7 @@
 
 .button {
   @include button;
+  @extend .dib;
   @extend .mb1;
   @extend .pv2;
   @extend .ph3;
