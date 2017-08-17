@@ -31,7 +31,7 @@ function Tabs (tab) {
   }.bind(this);
 
   var links = this.tabsItem.querySelectorAll('a');
-  var active = this.tabsItem.querySelector('.active') || this.tabsItem.querySelector('.tabs-header-link')[0];
+  var active = this.tabsItem.querySelector('.active') || this.tabsItem.querySelector('.tabs-header-link');
   active.classList.add('active');
 
   // Run first time
