@@ -1,6 +1,8 @@
 $border-color: map-get($color-palette, gray);
 $radio-size: 1em;
 
+input[type="url"],
+input[type="tel"],
 input[type="number"],
 input[type="text"],
 input[type="password"],
