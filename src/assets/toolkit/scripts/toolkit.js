@@ -30,7 +30,7 @@ function Tabs (tab) {
     this.displayTabs(e.target);
   }.bind(this);
 
-  var links = this.tabsItem.querySelectorAll('a');
+  var links = this.tabsItem.querySelectorAll('[data-tab]');
   var active = this.tabsItem.querySelector('.active') || this.tabsItem.querySelector('.tabs-header-link');
   active.classList.add('active');
 
