@@ -46,7 +46,10 @@ function Tabs (tab) {
 // Initialize Tabs
 var tabs = document.querySelectorAll('[data-tabs]');
 
-for (var tab of tabs) {
-  new Tabs(tab);
+if (tabs) {
+  for (var tab of tabs) {
+    new Tabs(tab);
+  }
 }
+
 
