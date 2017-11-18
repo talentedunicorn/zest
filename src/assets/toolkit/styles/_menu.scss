@@ -2,39 +2,31 @@
   @extend .list;
   @extend .ma0;
   @extend .pa0;
+  @extend .flex;
+  @extend .flex-column;
+  @extend .flex-row-l;
+  @extend .items-center;
+
+  .sidebar & {
+      @extend .flex-column;
+      @extend .items-start;
+  }
 
   li {
-    @extend .db;
-    @extend .dib-l;
-
-    .sidebar & {
-      @extend .db;
-    }
+    @extend .mv2;
+    @extend .mr2-l;
   }
 
   .button {
     @include button;
-    @extend .dib;
-    @extend .pa2;
+    @extend .mb0;
   }
 
   a {
     @extend .link;
     @extend .db;
-    @extend .pa3;
+    @extend .pa2;
     @extend .black;
-    @extend .br;
-    @extend .bw1;
-    @extend .bn-l;
-    @extend .b--transparent;
-    @extend .b;
-    @extend .mb2;
-    @extend .mb0-l;
-
-    .sidebar & {
-      @extend .br-l;
-      @extend .bw2;
-    }
 
     &.active,
     &:hover {
