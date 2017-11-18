@@ -6,13 +6,15 @@
   }
   
   &-header {
-    @extend .cf;
     @extend .overflow-y-auto;
-    white-space: nowrap;
+    @extend .flex;
+    @extend .flex-column;
+    @extend .flex-row-l;
+    @extend .items-center-l;
 
     &-link {
-      margin-left: -4px; // https://css-tricks.com/fighting-the-space-between-inline-block-elements/#article-header-id-1
-      @extend .dib;
+      flex: 1;
+      @extend .tc;
       @extend .ma0;
       @extend .link;
       @extend .primary;
